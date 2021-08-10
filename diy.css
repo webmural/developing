@@ -32,11 +32,6 @@ dt {
   text-transform: uppercase;
 }
 
-dt::after,
-dt::before {
-  content: "+++";
-}
-
 dd::first-letter {
   background: var(--dew-ink);
   color: var(--dew-oil);
@@ -54,8 +49,13 @@ h1 {
   margin: 0;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 33em) {
+  dt::after,
+  dt::before {
+    content: "+++";
+  }
+
   body {
-    letter-spacing: 2px;
+    word-spacing: 3px;
   }
 }
